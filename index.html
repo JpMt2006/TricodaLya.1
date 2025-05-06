@@ -14,12 +14,11 @@
     <div class="menu-toggle" id="menu-toggle">&#9776;</div>
     <nav class="menu" id="menu">
       <a href="#inicio">Início</a>
-      <a href="#tecnicas">Técnicas</a>
       <a href="#projetos">Projetos</a>
       <a href="#Peças">Peças a Venda</a>
       <a href="#galeria">Galeria</a>
       <a href="#contato">Contato</a>
-      <
+      
     </nav>
   </header>
   
@@ -41,43 +40,11 @@
       <div class="hero-text">
         <h1>Descubra a Arte do Tricô e do Crochê</h1>
         <p>Aprenda técnicas, encontre inspiração e crie peças únicas com nossas dicas e tutoriais de tricô para todos os níveis.</p>
-        <button class="btn btn-primary" onclick="document.getElementById('tecnicas').scrollIntoView()">Explorar Técnicas</button>
+        <button class="btn btn-primary" onclick="document.getElementById('tecnicas').scrollIntoView()">Explorar peças</button>
         <button class="btn btn-secondary" onclick="document.getElementById('projetos').scrollIntoView()">Ver Projetos</button>
       </div>
       <div>
-        <img src="arte-ilustracao.png" alt="Arte em Tricô" style="max-width: 300px;">
-      </div>
-    </section>
-
-    <section id="tecnicas">
-      <h2>Técnicas de Tricô</h2>
-      <p style="text-align: center">Aprenda desde os pontos básicos até técnicas avançadas para criar peças incríveis.</p>
-      <div class="cards">
-        <div class="card">
-          <h3>Pontos Básicos</h3>
-          <p>Aprenda os pontos fundamentais como o ponto meia, ponto tricô e montagem de pontos.</p>
-          <a href="#">Saiba mais &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Técnicas Intermediárias</h3>
-          <p>Domine técnicas como cabos, tranças, pontos rendados e combinações de pontos.</p>
-          <a href="#">Saiba mais &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Técnicas Avançadas</h3>
-          <p>Explore técnicas como colorwork, intarsia, tricô circular e técnicas de acabamento profissional.</p>
-          <a href="#">Saiba mais &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Texturas e Padrões</h3>
-          <p>Crie relevos, desenhos e formas usando combinações de pontos e fios diferentes.</p>
-          <a href="#">Saiba mais &rarr;</a>
-        </div>
-        <div class="card">
-          <h3>Acabamentos</h3>
-          <p>Aprenda a finalizar suas peças com perfeição, usando técnicas de costura e bloqueio.</p>
-          <a href="#">Saiba mais &rarr;</a>
-        </div>
+        <img src="Img/img14.jpg" alt="Arte em Tricô" style="max-width: 300px;border-radius: 50%;">
       </div>
     </section>
 
@@ -110,6 +77,50 @@
       <h2>Peças disponiveis</h2>
       <p style="text-align: center">Descubra os melhores materiais, agulhas e fios para seus trabalhos manuais.</p>
     </section>
+      <section class="venda-section" id="venda">
+        
+        <div class="venda-container">
+          <button class="nav-btn left" onclick="scrollVenda(-1)">&#10094;</button>
+          <div class="venda-scroll" id="vendaScroll">
+            <div class="venda-card">
+              <img src="https://via.placeholder.com/250x200?text=Peça+1" alt="Peça 1">
+              <h3>Bolsa Crochê</h3>
+              <p>Feita à mão com fio 100% algodão</p>
+              <div class="preco">R$ 80,00</div>
+            </div>
+            <div class="venda-card">
+              <img src="https://via.placeholder.com/250x200?text=Peça+2" alt="Peça 2">
+              <h3>Blusa Tricô</h3>
+              <p>Tricô artesanal, tamanho único</p>
+              <div class="preco">R$ 120,00</div>
+            </div>
+            <div class="venda-card">
+              <img src="https://via.placeholder.com/250x200?text=Peça+3" alt="Peça 3">
+              <h3>Cachecol Colorido</h3>
+              <p>Fio antialérgico, várias cores</p>
+              <div class="preco">R$ 65,00</div>
+            </div>
+            <div class="venda-card">
+              <img src="https://via.placeholder.com/250x200?text=Peça+4" alt="Peça 4">
+              <h3>Conjunto Infantil</h3>
+              <p>Tricô macio para bebês</p>
+              <div class="preco">R$ 95,00</div>
+            </div>
+          </div>
+          <button class="nav-btn right" onclick="scrollVenda(1)">&#10095;</button>
+        </div>
+      </section>
+      
+      <script>
+        function scrollVenda(direction) {
+          const container = document.getElementById("vendaScroll");
+          const scrollAmount = 300;
+          container.scrollBy({
+            left: direction * scrollAmount,
+            behavior: "smooth"
+          });
+        }
+      </script>
 
     <section class="galeria-section" id="galeria">
       <h2>Galeria de Projetos</h2>
