@@ -104,6 +104,16 @@ header nav a {
     margin-left: 1rem;
   }
   @media (max-width: 600px) {
+    .hero-section {
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .hero-section h1,
+    .hero-section p {
+      text-align: center;
+    }
+  
     .btn-primary {
       display: flex;
       flex-direction: column;
@@ -111,16 +121,8 @@ header nav a {
       gap: 10px;
     }
   
-    .btn-secondary {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-      max-width: 220px;
-      text-align: center;
-    }
-    .hero{
-        display: flex;
-        width: 100%;
+    .btn-secondary{
+      width: 100%;
       max-width: 220px;
       text-align: center;
     }
