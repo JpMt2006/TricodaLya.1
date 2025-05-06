@@ -1,0 +1,114 @@
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdf7f4;
+  color: #4b2e1e;
+}
+header {
+  position: fixed;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+header nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8rem 2rem 4rem;
+}
+.hero-text {
+  max-width: 50%;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: #823c11;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.btn-primary {
+  background: #d97a10;
+  color: white;
+}
+.btn-secondary {
+  background: white;
+  color: #d97a10;
+  border: 2px solid #d97a10;
+  margin-left: 1rem;
+}
+section {
+  padding: 5rem 2rem;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.card {
+  background: #fff9e8;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 260px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #823c11;
+}
+.card p {
+  font-size: 0.95rem;
+  margin: 0.5rem 0 1rem;
+}
+.card a {
+  color: #d97a10;
+  text-decoration: none;
+  font-weight: bold;
+}
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.video-item iframe {
+  width: 320px;
+  height: 180px;
+  border-radius: 8px;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: #eee;
+  color: #333;
+}
