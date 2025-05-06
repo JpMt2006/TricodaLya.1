@@ -5,35 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Arte em Tricô</title>
   <link rel="icon" type="imagem"
-    href="https://w7.pngwing.com/pngs/179/409/png-transparent-crochet-hook-knitting-crochet-thread-knitting-wool-sewing-magenta-doll.png">
+    href="img/Logo.png">
   <link href="Tricolya.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="logo">🧶 Arte em Tricô</div>
-        <nav class="menu" id="menu">
-            <a href="#inicio">Início</a>
-            <a href="#tecnicas">Técnicas</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#Peças disponiveis">Peças disponiveis</a>
-            <a href="#contato">Contato</a>
-        </nav>
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-      </header>
-    
-      <main>
-        <!-- Conteúdo principal aqui -->
-      </main>
-    
-      <script>
-        const toggle = document.getElementById('menu-toggle');
-        const menu = document.getElementById('menu');
-    
-        toggle.addEventListener('click', () => {
-          menu.classList.toggle('active');
-        });
-      </script>
+  <header>
+    <div class="logo">🧶 Arte em Tricô</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav class="menu" id="menu">
+      <a href="#inicio">Início</a>
+      <a href="#tecnicas">Técnicas</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#Peças">Peças a Venda</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+      <
+    </nav>
   </header>
+  
+  <main>
+    <!-- Conteúdo principal aqui -->
+  </main>
+  
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+  
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 
   <main>
     <section class="hero" id="inicio">
@@ -96,9 +97,9 @@
       </div>
     </section>
 
-    <section id="#Peças disponiveis">
+    <section id="Peças">
       <h2>Peças disponiveis</h2>
-      <p>Descubra os melhores materiais, agulhas e fios para seus trabalhos manuais.</p>
+      <p style="text-align: center">Descubra os melhores materiais, agulhas e fios para seus trabalhos manuais.</p>
     </section>
 
     <section class="galeria-section" id="galeria">
@@ -135,12 +136,32 @@
         });
       }
     </script>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p style="text-align: center">Entre em contato para dúvidas, sugestões ou parcerias.</p>
+  </section>
+  <div class="botoes-centro">
+    <a href="https://wa.me/5521986180928?text=Olá!%20Gostaria%20de%20saber%20mais." target="_blank" class="botao-link">
+      <button class="botao-whatsapp">
+        <img src="https://cdn-icons-png.flaticon.com/24/733/733585.png" alt="WhatsApp" />
+        WhatsApp
+      </button>
+    </a>
   
-
-    <section id="contato">
-      <h2>Contato</h2>
-      <p>Entre em contato para dúvidas, sugestões ou parcerias.</p>
-    </section>
+    <a href="https://www.youtube.com/@tricodalya6171" target="_blank" class="botao-link">
+      <button class="botao-youtube">
+        <img src="https://cdn-icons-png.flaticon.com/24/1384/1384060.png" alt="YouTube" />
+        YouTube
+      </button>
+    </a>
+  
+    <a href="https://www.instagram.com/tricodalya/" target="_blank" class="botao-link">
+      <button class="botao-instagram">
+        <img src="https://cdn-icons-png.flaticon.com/24/2111/2111463.png" alt="Instagram" />
+        Instagram
+      </button>
+    </a>
+  </div>
   </main>
 
   <footer>
