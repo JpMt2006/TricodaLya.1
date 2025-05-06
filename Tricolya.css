@@ -112,3 +112,67 @@ footer {
   background: #eee;
   color: #333;
 }
+<<<<<<< Updated upstream
+=======
+
+.galeria-section {
+    padding: 40px 10%;
+    background: #fff7f0;
+    text-align: center;
+  }
+  
+  .galeria-section h2 {
+    color: #803300;
+    margin-bottom: 20px;
+  }
+  
+  .galeria-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .galeria-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+  }
+  
+  .galeria-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .galeria-scroll img {
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .nav-btn {
+    background-color: #d2691e;
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+    z-index: 2;
+  }
+  
+  .nav-btn:hover {
+    background-color: #a0522d;
+  }
+  
+  .left {
+    margin-right: 10px;
+  }
+  
+  .right {
+    margin-left: 10px;
+  }
+  
+>>>>>>> Stashed changes
