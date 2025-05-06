@@ -112,8 +112,11 @@ footer {
   background: #eee;
   color: #333;
 }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> 85873aea46c338a55103db037fb9388e8a336fa5
 
 .galeria-section {
     padding: 40px 10%;
@@ -145,7 +148,11 @@ footer {
   }
   
   .galeria-scroll img {
+<<<<<<< HEAD
     height: auto;
+=======
+    height: 150px;
+>>>>>>> 85873aea46c338a55103db037fb9388e8a336fa5
     width: auto;
     border-radius: 10px;
     flex-shrink: 0;
@@ -161,7 +168,10 @@ footer {
     font-size: 18px;
     border-radius: 50%;
     z-index: 2;
+<<<<<<< HEAD
     
+=======
+>>>>>>> 85873aea46c338a55103db037fb9388e8a336fa5
   }
   
   .nav-btn:hover {
@@ -169,6 +179,7 @@ footer {
   }
   
   .left {
+<<<<<<< HEAD
     margin-left: -30px;
     left: auto;
   }
@@ -192,3 +203,12 @@ footer {
       display: none; /* Oculta em telas pequenas (uso com swipe) */
     }
 >>>>>>> Stashed changes
+=======
+    margin-right: 10px;
+  }
+  
+  .right {
+    margin-left: 10px;
+  }
+  
+>>>>>>> 85873aea46c338a55103db037fb9388e8a336fa5
