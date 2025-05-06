@@ -161,6 +161,7 @@ footer {
     font-size: 18px;
     border-radius: 50%;
     z-index: 2;
+    
   }
   
   .nav-btn:hover {
@@ -168,11 +169,26 @@ footer {
   }
   
   .left {
-    margin-right: 10px;
+    margin-left: -30px;
+    left: auto;
   }
   
   .right {
-    margin-left: 10px;
+    margin-right: -30px;
+    right: auto;
   }
+<<<<<<< Updated upstream
   
+>>>>>>> Stashed changes
+=======
+
+  @media (max-width: 768px) {
+    .galeria-scroll img {
+      max-width: 70%;
+      max-height: 200px;
+    }
+  
+    .nav-btn {
+      display: none; /* Oculta em telas pequenas (uso com swipe) */
+    }
 >>>>>>> Stashed changes
