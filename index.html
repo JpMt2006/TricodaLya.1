@@ -145,7 +145,7 @@
           <div class="galeria-item"><img src="Img/img16.jpg" alt="Projeto 16" /></div>
           <div class="galeria-item"><img src="Img/img17.jpg" alt="Projeto 17" /></div>
           <div class="galeria-item"><img src="Img/img18.jpg" alt="Projeto 18" /></div>
-          <div class="galeria-item"><img src="Img/img19.jpg" alt="Projeto 19" /></div>          <div class="galeria-item"><img src="Img/img10.jpg" alt="Projeto 10" /></div>
+          <div class="galeria-item"><img src="Img/img19.jpg" alt="Projeto 19" /></div>         
           <div class="galeria-item"><img src="Img/img20.jpg" alt="Projeto 20" /></div>
           <div class="galeria-item"><img src="Img/img21.jpg" alt="Projeto 21" /></div>
           <div class="galeria-item"><img src="Img/img22.jpg" alt="Projeto 22" /></div>
@@ -153,17 +153,45 @@
         </div>
         <button class="nav-btn right" onclick="scrollGaleria(1)">&#10095;</button>
       </div>
+
+      <div id="imagemModal" class="modal">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <img class="modal-conteudo" id="imagemModalConteudo">
+      </div>
+
     </section>
-  
     <script>
-      function scrollGaleria(direction) {
-        const container = document.getElementById("galeriaScroll");
-        const itemWidth = container.querySelector(".galeria-item").offsetWidth + 20; // item + gap
-        container.scrollBy({
-          left: direction * itemWidth,
-          behavior: "smooth"
-        });
-      }
+    function scrollGaleria(direction) {
+      const container = document.getElementById("galeriaScroll");
+      const itemWidth = container.querySelector(".galeria-item").offsetWidth + 20; // item + gap
+      container.scrollBy({
+        left: direction * itemWidth,
+        behavior: "smooth"
+      });
+    }
+
+    function abrirModal(src) {
+    const modal = document.getElementById("imagemModal");
+    const modalImg = document.getElementById("imagemModalConteudo");
+    modal.style.display = "block";
+    modalImg.src = src;
+  }
+
+  function fecharModal() {
+    document.getElementById("imagemModal").style.display = "none";
+  }
+
+  // Adiciona o clique a todas as imagens da galeria
+  document.querySelectorAll(".galeria-scroll img").forEach(img => {
+    img.addEventListener("click", () => abrirModal(img.src));
+  });
+
+  const modalImg = document.getElementById('imgModal');
+
+modalImg.addEventListener('dblclick', function () {
+  this.classList.toggle('zoom');
+});
+
     </script>
   <section id="contato">
     <h2>Contato</h2>
