@@ -1,114 +1,159 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Galeria de Projetos</title>
+  <meta charset="UTF-8">
+  <title>Galeria com Categorias</title>
   <style>
-    .galeria-section {
-      padding: 40px 10%;
-      background: #fff7f0;
-      text-align: center;
+    body {
+      background: #fff6ef;
+      font-family: sans-serif;
+      padding: 30px;
     }
 
-    .galeria-section h2 {
-      color: #803300;
+    h2 {
+      color: #8c3900;
+    }
+
+    .filtros {
       margin-bottom: 20px;
     }
 
-    .galeria-container {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 100%;
-      overflow: hidden;
+    .filtro-btn {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 20px;
+      background: #ddd;
+      cursor: pointer;
     }
 
-    .galeria-scroll {
+    .filtro-btn.ativo {
+      background-color: #b55214;
+      color: white;
+    }
+
+    .carrossel-container {
+      position: relative;
+    }
+
+    .carrossel {
       display: flex;
       overflow-x: auto;
-      scroll-behavior: smooth;
       gap: 20px;
-      padding: 10px 0;
+      scroll-behavior: smooth;
     }
 
-    .galeria-scroll::-webkit-scrollbar {
-      display: none;
+    .item {
+      min-width: 200px;
+      flex-shrink: 0;
     }
 
-    .galeria-item {
-      flex: 0 0 auto;
-      width: 250px;
-    }
-
-    .galeria-item img {
+    .item img {
       width: 100%;
-      height: auto;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .nav-btn {
-      background-color: #d2691e;
+    .seta {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #b55214;
       color: white;
       border: none;
-      padding: 10px 14px;
+      padding: 10px;
       cursor: pointer;
-      font-size: 18px;
-      border-radius: 50%;
-      z-index: 2;
+      font-size: 20px;
+      z-index: 10;
     }
 
-    .nav-btn:hover {
-      background-color: #a0522d;
+    .seta.esquerda {
+      left: -10px;
     }
 
-    .left {
-      margin-right: 10px;
+    .seta.direita {
+      right: -10px;
     }
 
-    .right {
-      margin-left: 10px;
-    }
-
-    @media (max-width: 600px) {
-      .galeria-item {
-        width: 180px;
-      }
-
-      .nav-btn {
-        display: none;
-      }
+    .item.hidden {
+      display: none !important;
     }
   </style>
 </head>
 <body>
 
-  <section class="galeria-section" id="galeria">
-    <h2>Galeria de Projetos</h2>
-    <div class="galeria-container">
-      <button class="nav-btn left" onclick="scrollGaleria(-1)">&#10094;</button>
-      <div class="galeria-scroll" id="galeriaScroll">
-        <div class="galeria-item"><img src="Img/‎imagem1.jpg" alt="Projeto 1" /></div>
-        <div class="galeria-item"><img src="Img/imagem2.jpg" alt="Projeto 2" /></div>
-        <div class="galeria-item"><img src="Img/imagem3.jpg" alt="Projeto 3" /></div>
-        <div class="galeria-item"><img src="Img/imagem4.jpg" alt="Projeto 4" /></div>
-        <div class="galeria-item"><img src="Img/imagem5.jpg" alt="Projeto 5" /></div>
+  <h2>Galeria de Projetos</h2>
+
+  <div class="filtros">
+    <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
+    <button class="filtro-btn" data-categoria="x">X</button>
+    <button class="filtro-btn" data-categoria="y">Y</button>
+  </div>
+
+  <div class="carrossel-container">
+    <button class="seta esquerda">&#10094;</button>
+    <div class="carrossel" id="carrossel">
+      <!-- Itens vão aqui -->
+      <div class="item" data-categoria="x">
+        <img src="https://via.placeholder.com/200x150/ffcccb?text=Projeto+X">
       </div>
-      <button class="nav-btn right" onclick="scrollGaleria(1)">&#10095;</button>
+      <div class="item" data-categoria="y">
+        <img src="https://via.placeholder.com/200x150/b0e0e6?text=Projeto+Y">
+      </div>
+      <div class="item" data-categoria="x">
+        <img src="https://via.placeholder.com/200x150/ffcccb?text=Outro+X">
+      </div>
     </div>
-  </section>
+    <button class="seta direita">&#10095;</button>
+  </div>
 
   <script>
-    function scrollGaleria(direction) {
-      const container = document.getElementById("galeriaScroll");
-      const itemWidth = container.querySelector(".galeria-item").offsetWidth + 20; // item + gap
-      container.scrollBy({
-        left: direction * itemWidth,
-        behavior: "smooth"
+    const botoes = document.querySelectorAll('.filtro-btn');
+    const carrossel = document.getElementById('carrossel');
+    const esquerda = document.querySelector('.seta.esquerda');
+    const direita = document.querySelector('.seta.direita');
+
+    // Filtragem
+    botoes.forEach(btn => {
+      btn.addEventListener('click', () => {
+        botoes.forEach(b => b.classList.remove('ativo'));
+        btn.classList.add('ativo');
+
+        const categoria = btn.dataset.categoria;
+        const itens = document.querySelectorAll('.item');
+
+        itens.forEach(item => {
+          const cat = item.dataset.categoria;
+          if (categoria === 'todos' || cat === categoria) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        carrossel.scrollLeft = 0;
       });
+    });
+
+    // Navegação
+    esquerda.addEventListener('click', () => {
+      carrossel.scrollBy({ left: -250, behavior: 'smooth' });
+    });
+
+    direita.addEventListener('click', () => {
+      carrossel.scrollBy({ left: 250, behavior: 'smooth' });
+    });
+
+    // Exemplo: adicionar novo item dinamicamente na categoria Y (e aparece na aba Todos)
+    function adicionarNovoProjeto(url, categoria) {
+      const novo = document.createElement('div');
+      novo.classList.add('item');
+      novo.setAttribute('data-categoria', categoria);
+      novo.innerHTML = `<img src="${url}">`;
+      carrossel.appendChild(novo);
     }
+
+    // Exemplo:
+    // adicionarNovoProjeto('https://via.placeholder.com/200x150/ffffcc?text=Novo+Y', 'y');
   </script>
 
 </body>

@@ -302,12 +302,12 @@ footer {
     display: none;
   }
 
-  .galeria-item {
+  .item {
     flex: 0 0 auto;
     width: 250px;
   }
 
-  .galeria-item img {
+  .item img {
     width: 100%;
     height: auto;
     border-radius: 10px;
@@ -387,6 +387,69 @@ footer {
     transform: scale(2);
     cursor: zoom-out;
     transition: transform 0.3s ease;
+  }
+
+  .filtros {
+    margin-bottom: 20px;
+  }
+
+  .filtro-btn {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #ddd;
+    cursor: pointer;
+  }
+
+  .filtro-btn.ativo {
+    background-color: #b55214;
+    color: white;
+  }
+  .carrossel-container {
+    position: relative;
+  }
+
+  .carrossel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+  }
+
+  .item {
+    min-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .item img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #b55214;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 10;
+  }
+
+  .seta.esquerda {
+    left: -10px;
+  }
+
+  .seta.direita {
+    right: -10px;
+  }
+
+  .item.hidden {
+    display: none !important;
   }
 
   .botoes-centro {
