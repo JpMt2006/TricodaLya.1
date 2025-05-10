@@ -20,7 +20,18 @@ function scrollGaleria(direction) {
   const container = document.getElementById("galeriaScroll");
   const item = container.querySelector(".item:not(.hidden)");
   const itemWidth = item ? item.offsetWidth + 20 : 220;
-  container.scrollBy({ left: direction * itemWidth, behavior: "smooth" });
+  const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+  if (direction === 1) {
+    // Se estiver no final, volta para o início
+    if (Math.ceil(container.scrollLeft + itemWidth) >= maxScrollLeft) {
+      container.scrollTo({ left: 0, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: itemWidth, behavior: "smooth" });
+    }
+  } else {
+    container.scrollBy({ left: -itemWidth, behavior: "smooth" });
+  }
 }
 
 const botoes = document.querySelectorAll(".filtro-btn");
@@ -102,3 +113,5 @@ function voltarAoTopo() {
     behavior: 'smooth'
   });
 }
+
+
