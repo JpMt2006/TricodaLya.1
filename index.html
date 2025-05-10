@@ -173,18 +173,20 @@
       <h2>Galeria de Projetos</h2>
       
       <div class="filtros">
-        <button class="filtro-btn ativo" data-categoria="todos">Todos</button>
-        <button class="filtro-btn" data-categoria="x">X</button>
-        <button class="filtro-btn" data-categoria="y">Y</button>
+        <button class="filtro-btn ativo" data-categoria="todos">Todas as peças</button>
+        <button class="filtro-btn" data-categoria="x">Bolsas</button>
+        <button class="filtro-btn" data-categoria="y">Cachecois</button>
+        <button class="filtro-btn" data-categoria="w">Bolsas</button>
+        <button class="filtro-btn" data-categoria="v">Cachecois</button>
       </div>
     
       <div class="galeria-container">
         <button class="nav-btn left" onclick="scrollGaleria(-1)">&#10094;</button>
         <div class="galeria-scroll" id="galeriaScroll">
           
-          <div class="item" data-categoria="x"><img src="Img/img1.jpg" alt="Projeto 1" /></div>
-          <div class="item" data-categoria="y"><img src="Img/img2.jpg" alt="Projeto 2" /></div>
-          <div class="item" data-categoria="x"><img src="Img/img3.jpg" alt="Projeto 3" /></div>
+          <div class="item" data-categoria="X"><img src="Img/img1.jpg" alt="Projeto 1" /></div>
+          <div class="item" data-categoria="w"><img src="Img/img2.jpg" alt="Projeto 2" /></div>
+          <div class="item" data-categoria="v"><img src="Img/img3.jpg" alt="Projeto 3" /></div>
           <div class="item" data-categoria="y"><img src="Img/img4.jpg" alt="Projeto 4" /></div>
           <div class="item" data-categoria="x"><img src="Img/img5.jpg" alt="Projeto 5" /></div>
           <div class="item" data-categoria="y"><img src="Img/img6.jpg" alt="Projeto 6" /></div>
@@ -241,6 +243,7 @@
   </div>
   </main>
 
+  <button id="btnTopo" onclick="voltarAoTopo()">&#8679;</button>
   <footer>
     <p>&copy; 2025 Arte em Tricô. Todos os direitos reservados.</p>
   </footer>

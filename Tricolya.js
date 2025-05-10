@@ -85,3 +85,20 @@ modalImg.style.cursor = "zoom-out";
 zoomAtivo = !zoomAtivo;
 });
 
+// Mostrar o botão ao rolar
+window.onscroll = () => {
+  const btn = document.getElementById("btnTopo");
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+
+// Rolar suavemente para o topo
+function voltarAoTopo() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
