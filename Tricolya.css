@@ -506,15 +506,26 @@ footer {
     z-index: 99;
     font-size: 24px;
     background-color: #d2691e;
-    color: white;
+    color: rgb(255, 254, 254);
     border: none;
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease;
   }
   
+  /* Hover (desktop) */
   #btnTopo:hover {
-    background-color: #cc7a00;
+    background-color: #ff9a53;
+  }
+  
+  /* Responsivo para telas pequenas */
+  @media (max-width: 600px) {
+    #btnTopo {
+      padding: 16px;
+      font-size: 20px;
+      bottom: 15px;
+      right: 15px;
+    }
   }
