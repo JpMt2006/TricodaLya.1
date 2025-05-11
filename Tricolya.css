@@ -520,10 +520,12 @@ footer {
     background-color: #ff9a53;
   }
   
- /* Responsivo — pode manter se quiser ajustes menores */
-@media (max-width: 600px) {
-  #btnTopo {
-    bottom: 16px;
-    right: 16px;
+  /* Responsivo para telas pequenas */
+  @media (max-width: 600px) {
+    #btnTopo {
+      padding: 16px;
+      font-size: 20px;
+      bottom: 15px;
+      right: 15px;
+    }
   }
-}
