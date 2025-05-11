@@ -99,7 +99,7 @@ zoomAtivo = !zoomAtivo;
 // Mostrar o botão ao rolar
 window.onscroll = () => {
   const btn = document.getElementById("btnTopo");
-  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
     btn.style.display = "block";
   } else {
     btn.style.display = "none";
@@ -113,22 +113,5 @@ function voltarAoTopo() {
     behavior: 'smooth'
   });
 }
-//Loja
-function scrollVenda(direction) {
-  const container = document.getElementById("vendaScroll");
-  const card = container.querySelector(".venda-card");
-  const cardWidth = card ? card.offsetWidth + 20 : 220;
-  container.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
-}
 
-function abrirDetalhes(titulo, descricao, preco, imagem) {
-  document.getElementById("modalTitulo").innerText = titulo;
-  document.getElementById("modalDescricao").innerText = descricao;
-  document.getElementById("modalPreco").innerText = preco;
-  document.getElementById("modalImg").src = imagem;
-  document.getElementById("detalheModal").style.display = "flex";
-}
 
-function fecharDetalhes() {
-  document.getElementById("detalheModal").style.display = "none";
-}
