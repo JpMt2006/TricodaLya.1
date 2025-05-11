@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja Tricodalya</title>
+  <link rel="icon" type="imagem"
+    href="img/0Logo.png">
+  <link href="Tricolya.css" rel="stylesheet">
+  <link href="loja.css" rel="stylesheet">
+
+</head>
+<body>
+  <script src="Tricolya.js" defer></script>
+  <header>
+    <div class="logo">🧶 Arte em Tricô</div>
+    <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+    <nav class="menu" id="menu">
+      <a href="index.html">Início</a>
+      <a href="#projetos">Projetos</a>
+      <a href="">Loja</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+      
+    </nav>
+  </header>
+  <section class="venda-section" id="venda">
+    <h2>Cachecol</h2>
+    <section class="venda-section" id="venda">
+      <h2>Roupas</h2>
+      <div class="venda-container">
+        <button class="nav-btn left" onclick="scrollVenda(-1)">&#10094;</button>
+        <div class="venda-scroll" id="vendaScroll">
+          <div class="venda-card" onclick="abrirDetalhes('Bolsa Crochê', 'Feita à mão com fio 100% algodão', 'R$ 80,00', 'https://via.placeholder.com/250x200?text=Peça+1')">
+            <img src="https://via.placeholder.com/250x200?text=Peça+1" alt="Peça 1" />
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+          <div class="venda-card" onclick="abrirDetalhes('Blusa Tricô', 'Tricô artesanal, tamanho único', 'R$ 120,00', 'https://via.placeholder.com/250x200?text=Peça+2')">
+            <img src="https://via.placeholder.com/250x200?text=Peça+2" alt="Peça 2" />
+            <h3>Blusa Tricô</h3>
+            <p>Tricô artesanal, tamanho único</p>
+            <div class="preco">R$ 120,00</div>
+         </div>
+         <div class="venda-card" onclick="abrirDetalhes('Bolsa Crochê', 'Feita à mão com fio 100% algodão', 'R$ 80,00', 'https://via.placeholder.com/250x200?text=Peça+1')">
+          <img src="https://via.placeholder.com/250x200?text=Peça+1" alt="Peça 1" />
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+        <div class="venda-card" onclick="abrirDetalhes('Blusa Tricô', 'Tricô artesanal, tamanho único', 'R$ 120,00', 'https://via.placeholder.com/250x200?text=Peça+2')">
+          <img src="https://via.placeholder.com/250x200?text=Peça+2" alt="Peça 2" />
+          <h3>Blusa Tricô</h3>
+          <p>Tricô artesanal, tamanho único</p>
+          <div class="preco">R$ 120,00</div>
+       </div>
+       <div class="venda-card" onclick="abrirDetalhes('href  Crochê', 'Feitas mão com fio 100% algodão', 'R$ 80,00','Img/a2.jpg' ,'Img/a1.jpg')">
+          <img src="Img/a1.jpg" alt="Peça 1" />
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+        <div class="venda-card" onclick="abrirDetalhes('Blusa Tricô', 'Tricô artesanal, tamanho único', 'R$ 120,00', 'img/a1.jpg'>
+          <img src alt="Peça 2" />
+          <h3>Blusa Tricô</h3>
+          <p>Tricô artesanal, tamanho único</p>
+          <div class="preco">R$ 120,00</div>
+       </div>
+             
+          <!-- Adicione mais cards se quiser -->
+        </div>
+        <button class="nav-btn right" onclick="scrollVenda(1)">&#10095;</button>
+      </div>
+    </section>
+    
+    <!-- Modal de detalhes -->
+    <div id="detalheModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fecharDetalhes()">&times;</span>
+        <img id="modalImg" src="" alt="" />
+        <h3 id="modalTitulo"></h3>
+        <p id="modalDescricao"></p>
+        <div class="preco" id="modalPreco"></div>
+      </div>
+    
+  </section>
+
+ 
+
+  </body>
+  </html>
