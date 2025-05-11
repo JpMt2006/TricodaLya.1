@@ -115,3 +115,35 @@ function voltarAoTopo() {
 }
 
 
+function scrollVenda(direction) {
+  const container = document.getElementById("vendaScroll");
+  const card = container.querySelector(".venda-card");
+  const cardWidth = card ? card.offsetWidth + 20 : 220;
+  container.scrollBy({ left: direction * cardWidth, behavior: "smooth" });
+}
+
+function abrirDetalhes(titulo, descricao, preco, imagem) {
+  document.getElementById("modalTitulo").innerText = titulo;
+  document.getElementById("modalDescricao").innerText = descricao;
+  document.getElementById("modalPreco").innerText = preco;
+  document.getElementById("modalImg").src = imagem;
+  document.getElementById("detalheModal").style.display = "flex";
+}
+
+function fecharDetalhes() {
+  document.getElementById("detalheModal").style.display = "none";
+}
+function abrirDetalhes(titulo, descricao, preco, imagem) {
+  document.getElementById("modalTitulo").innerText = titulo;
+  document.getElementById("modalDescricao").innerText = descricao;
+  document.getElementById("modalPreco").innerText = preco;
+  document.getElementById("modalImg").src = imagem;
+
+  // Coloque aqui o número com DDD no formato internacional (ex: 55 para Brasil)
+  const numero = "5511999999999"; // Altere para o número correto
+  const mensagem = `Olá! Gostaria de mais informações sobre: ${titulo} (${preco})`;
+  const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  document.getElementById("zapLink").href = link;
+  document.getElementById("detalheModal").style.display = "flex";
+}
