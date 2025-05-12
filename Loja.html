@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,70 +25,302 @@
     </nav>
   </header>
   <section class="venda-section" id="venda">
-    <h2>Cachecol</h2>
-    <section class="venda-section" id="venda">
-      <h2>Roupas</h2>
+    <h2>Bolsas</h2>
+    <div class="venda-container">
+      <button class="nav-btn left" onclick="scrollVenda(-1)">&#10094;</button>
+      <div class="venda-scroll" id="vendaScroll">
+        
+        <div class="venda-card" onclick="abrirDetalhes(
+          'Bolsa Crochê',
+          'Feita à mão com fio 100% algodão',
+          'R$ 80,00',
+          ['Img/a1.jpg', 'Img/a2.jpg'],
+          'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+        )">
+          <img src="Img/a1.jpg" alt="Bolsa">
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+
+        <div class="venda-card" onclick="abrirDetalhes(
+          'Bolsa Crochê',
+          'Feita à mão com fio 100% algodão',
+          'R$ 80,00',
+          ['Img/a1.jpg', 'Img/a2.jpg'],
+          'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+        )">
+          <img src="Img/a1.jpg" alt="Bolsa">
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+
+        <div class="venda-card" onclick="abrirDetalhes(
+          'Bolsa Crochê',
+          'Feita à mão com fio 100% algodão',
+          'R$ 80,00',
+          ['Img/a1.jpg', 'Img/a2.jpg'],
+          'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+        )">
+          <img src="Img/a1.jpg" alt="Bolsa">
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+
+        <div class="venda-card" onclick="abrirDetalhes(
+          'Bolsa Crochê',
+          'Feita à mão com fio 100% algodão',
+          'R$ 80,00',
+          ['Img/a1.jpg', 'Img/a2.jpg'],
+          'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+        )">
+          <img src="Img/a1.jpg" alt="Bolsa">
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+
+        <div class="venda-card" onclick="abrirDetalhes(
+          'Bolsa Crochê',
+          'Feita à mão com fio 100% algodão',
+          'R$ 80,00',
+          ['Img/a1.jpg', 'Img/a2.jpg'],
+          'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+        )">
+          <img src="Img/a1.jpg" alt="Bolsa">
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+
+        <div class="venda-card" onclick="abrirDetalhes(
+          'Bolsa Crochê',
+          'Feita à mão com fio 100% algodão',
+          'R$ 80,00',
+          ['Img/a1.jpg', 'Img/a2.jpg'],
+          'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+        )">
+          <img src="Img/a1.jpg" alt="Bolsa">
+          <h3>Bolsa Crochê</h3>
+          <p>Feita à mão com fio 100% algodão</p>
+          <div class="preco">R$ 80,00</div>
+        </div>
+        <!-- Se quiser adicionar mais produtos, cole novos venda-card aqui -->
+  
+      </div>
+      <button class="nav-btn right" onclick="scrollVenda(1)">&#10095;</button>
+    </div>
+
+      <h2>Coleçao inverno</h2>
       <div class="venda-container">
         <button class="nav-btn left" onclick="scrollVenda(-1)">&#10094;</button>
         <div class="venda-scroll" id="vendaScroll">
-          <div class="venda-card" onclick="abrirDetalhes('Bolsa Crochê', 'Feita à mão com fio 100% algodão', 'R$ 80,00', 'https://via.placeholder.com/250x200?text=Peça+1')">
-            <img src="https://via.placeholder.com/250x200?text=Peça+1" alt="Peça 1" />
+          
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
             <h3>Bolsa Crochê</h3>
             <p>Feita à mão com fio 100% algodão</p>
             <div class="preco">R$ 80,00</div>
           </div>
-          <div class="venda-card" onclick="abrirDetalhes('Blusa Tricô', 'Tricô artesanal, tamanho único', 'R$ 120,00', 'https://via.placeholder.com/250x200?text=Peça+2')">
-            <img src="https://via.placeholder.com/250x200?text=Peça+2" alt="Peça 2" />
-            <h3>Blusa Tricô</h3>
-            <p>Tricô artesanal, tamanho único</p>
-            <div class="preco">R$ 120,00</div>
-         </div>
-         <div class="venda-card" onclick="abrirDetalhes('Bolsa Crochê', 'Feita à mão com fio 100% algodão', 'R$ 80,00', 'https://via.placeholder.com/250x200?text=Peça+1')">
-          <img src="https://via.placeholder.com/250x200?text=Peça+1" alt="Peça 1" />
-          <h3>Bolsa Crochê</h3>
-          <p>Feita à mão com fio 100% algodão</p>
-          <div class="preco">R$ 80,00</div>
-        </div>
-        <div class="venda-card" onclick="abrirDetalhes('Blusa Tricô', 'Tricô artesanal, tamanho único', 'R$ 120,00', 'https://via.placeholder.com/250x200?text=Peça+2')">
-          <img src="https://via.placeholder.com/250x200?text=Peça+2" alt="Peça 2" />
-          <h3>Blusa Tricô</h3>
-          <p>Tricô artesanal, tamanho único</p>
-          <div class="preco">R$ 120,00</div>
-       </div>
-       <div class="venda-card" onclick="abrirDetalhes('href  Crochê', 'Feitas mão com fio 100% algodão', 'R$ 80,00','Img/a2.jpg' ,'Img/a1.jpg')">
-          <img src="Img/a1.jpg" alt="Peça 1" />
-          <h3>Bolsa Crochê</h3>
-          <p>Feita à mão com fio 100% algodão</p>
-          <div class="preco">R$ 80,00</div>
-        </div>
-        <div class="venda-card" onclick="abrirDetalhes('Blusa Tricô', 'Tricô artesanal, tamanho único', 'R$ 120,00', 'img/a1.jpg'>
-          <img src alt="Peça 2" />
-          <h3>Blusa Tricô</h3>
-          <p>Tricô artesanal, tamanho único</p>
-          <div class="preco">R$ 120,00</div>
-       </div>
-             
-          <!-- Adicione mais cards se quiser -->
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+          <!-- Se quiser adicionar mais produtos, cole novos venda-card aqui -->
+    
         </div>
         <button class="nav-btn right" onclick="scrollVenda(1)">&#10095;</button>
       </div>
-    </section>
+
+      <h2>cropped</h2>
+      <div class="venda-container">
+        <button class="nav-btn left" onclick="scrollVenda(-1)">&#10094;</button>
+        <div class="venda-scroll" id="vendaScroll">
+          
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
   
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+  
+          <div class="venda-card" onclick="abrirDetalhes(
+            'Bolsa Crochê',
+            'Feita à mão com fio 100% algodão',
+            'R$ 80,00',
+            ['Img/a1.jpg', 'Img/a2.jpg'],
+            'Essa bolsa é feita com amor e dedicação. Ideal para o dia a dia e super resistente.'
+          )">
+            <img src="Img/a1.jpg" alt="Bolsa">
+            <h3>Bolsa Crochê</h3>
+            <p>Feita à mão com fio 100% algodão</p>
+            <div class="preco">R$ 80,00</div>
+          </div>
+          <!-- Se quiser adicionar mais produtos, cole novos venda-card aqui -->
     
-      <div id="detalheModal" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="fecharDetalhes()">&times;</span>
-          <img id="modalImg" src="" alt="" />
-          <h3 id="modalTitulo"></h3>
+        </div>
+        <button class="nav-btn right" onclick="scrollVenda(1)">&#10095;</button>
+      </div>
+
+  
+    <!-- Modal -->
+    <div id="detalheModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="fecharDetalhes()">&times;</span>
+        <div class="imagem-principal-container">
+          <img id="imagemPrincipal" class="imagem-principal" src="" alt="Imagem do produto" onclick="toggleZoom(this)">
+        </div>
+        <div id="miniaturas" class="miniaturas"></div>
+        <h3 id="modalTitulo"></h3>
+  
+        <div class="tabs">
+          <button class="tab-btn active" onclick="mostrarAba('resumo')">Resumo</button>
+          <button class="tab-btn" onclick="mostrarAba('detalhes')">Detalhes</button>
+        </div>
+  
+        <div id="abaResumo" class="aba ativa">
           <p id="modalDescricao"></p>
           <div class="preco" id="modalPreco"></div>
-          <a id="zapLink" href="#" target="_blank" class="zap-btn">Mais Informações no WhatsApp</a>
         </div>
+  
+        <div id="abaDetalhes" class="aba">
+          <p id="modalDetalhes"></p>
+        </div>
+  
+        <a id="zapLink" href="#" target="_blank" class="zap-btn">Mais Informações no WhatsApp</a>
       </div>
-      
+    </div>
   </section>
+    
+    
 
- 
 
   </body>
   </html>
