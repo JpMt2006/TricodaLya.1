@@ -1,4 +1,9 @@
-.venda-container {
+
+  .venda-section {
+    padding: 2rem;
+  }
+
+  .venda-container {
     display: flex;
     align-items: center;
     position: relative;
@@ -9,8 +14,8 @@
     overflow-x: auto;
     scroll-behavior: smooth;
   }
-  
-  .venda-card {
+
+ .venda-card {
     background: #fff;
     padding: 16px;
     margin: 10px;
@@ -21,9 +26,18 @@
     cursor: pointer;
     transition: transform 0.3s;
   }
+
   .venda-card:hover {
     transform: scale(1.03);
   }
+
+  .venda-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
   .nav-btn {
     background: #c15300;
     border: none;
@@ -39,8 +53,17 @@
   .nav-btn.right {
     margin-left: 10px;
   }
+
+  @media (max-width: 768px) {
+    .nav-btn {
+      display: none;
+    }
   
-  /* Modal estilo */
+    .venda-card {
+      width: 180px;
+    }
+  }
+
   .modal {
     display: none;
     position: fixed;
@@ -53,47 +76,107 @@
     justify-content: center;
     align-items: center;
   }
-  
+
   .modal-content {
-    background: #fff;
-    padding: 24px;
-    border-radius: 12px;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
     width: 90%;
-    max-width: 500px;
-    text-align: center;
+    max-width: 600px;
     position: relative;
+    text-align: center;
   }
-  
-  .modal-content img {
-    width: 100%;
-    border-radius: 8px;
-  }
-  
-  .modal-content .close {
+
+  .close {
     position: absolute;
-    top: 8px;
-    right: 12px;
-    font-size: 28px;
+    top: 10px; right: 15px;
+    font-size: 1.5rem;
     cursor: pointer;
   }
-  
-  .preco {
-    font-weight: bold;
-    color: #c15300;
-    font-size: 1.2em;
-    margin-top: 8px;
+
+  .imagem-principal-container {
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 6px;
   }
+
+  .imagem-principal {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
+  }
+
+  .imagem-principal.zoomed {
+    transform: scale(2);
+    cursor: zoom-out;
+  }
+
+  .miniaturas {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .miniaturas img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+
+  .miniaturas img:hover,
+  .miniaturas img.selecionada {
+    border-color: #00c851;
+  }
+
+  .tabs {
+    margin: 1rem 0;
+  }
+
+  .tab-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    background: #eee;
+    border-radius: 5px;
+  }
+
+  .tab-btn.active {
+    background: #5d2a00;
+    color: white;
+  }
+
+  .aba {
+    display: none;
+  }
+
+  .aba.ativa {
+    display: block;
+  }
+
   .zap-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 18px;
-    background-color: #25D366;
+    background-color: #25d366;
     color: white;
-    font-weight: bold;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s;
+    font-weight: bold;
+    margin-top: 1rem;
   }
-  .zap-btn:hover {
-    background-color: #1ebc5d;
+
+  .preco {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #b65c00;
   }

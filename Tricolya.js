@@ -130,20 +130,62 @@ function abrirDetalhes(titulo, descricao, preco, imagem) {
   document.getElementById("detalheModal").style.display = "flex";
 }
 
-function fecharDetalhes() {
-  document.getElementById("detalheModal").style.display = "none";
+function scrollVenda(direcao) {
+  const container = document.getElementById('vendaScroll');
+  const scrollAmount = 300;
+  container.scrollBy({ left: direcao * scrollAmount, behavior: 'smooth' });
 }
-function abrirDetalhes(titulo, descricao, preco, imagem) {
+
+function abrirDetalhes(titulo, descricao, preco, imagens, detalhesLongos) {
+  document.getElementById("imagemPrincipal").src = imagens[0];
+  
+  const miniaturasDiv = document.getElementById("miniaturas");
+  miniaturasDiv.innerHTML = "";
+
+  imagens.forEach((src, index) => {
+    const thumb = document.createElement("img");
+    thumb.src = src;
+    thumb.alt = "Miniatura " + (index + 1);
+    if (index === 0) thumb.classList.add("selecionada");
+    thumb.onclick = () => {
+      document.getElementById("imagemPrincipal").src = src;
+      document.querySelectorAll(".miniaturas img").forEach(img => img.classList.remove("selecionada"));
+      thumb.classList.add("selecionada");
+    };
+    miniaturasDiv.appendChild(thumb);
+  });
+
   document.getElementById("modalTitulo").innerText = titulo;
   document.getElementById("modalDescricao").innerText = descricao;
   document.getElementById("modalPreco").innerText = preco;
-  document.getElementById("modalImg").src = imagem;
+  document.getElementById("modalDetalhes").innerText = detalhesLongos;
 
-  // Coloque aqui o número com DDD no formato internacional (ex: 55 para Brasil)
-  const numero = "5511999999999"; // Altere para o número correto
+  const numero = "5511999999999"; // seu número com DDI
   const mensagem = `Olá! Gostaria de mais informações sobre: ${titulo} (${preco})`;
-  const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+  document.getElementById("zapLink").href = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
-  document.getElementById("zapLink").href = link;
+  mostrarAba("resumo");
   document.getElementById("detalheModal").style.display = "flex";
 }
+
+function fecharDetalhes() {
+  document.getElementById("detalheModal").style.display = "none";
+}
+
+function mostrarAba(nome) {
+  document.querySelectorAll('.aba').forEach(div => div.classList.remove('ativa'));
+  document.getElementById("aba" + capitalize(nome)).classList.add('ativa');
+
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+// Zoom com clique
+const imagemPrincipal = document.getElementById("imagemPrincipal");
+
+imagemPrincipal.addEventListener("click", () => {
+  imagemPrincipal.classList.toggle("zoomed");
+});
